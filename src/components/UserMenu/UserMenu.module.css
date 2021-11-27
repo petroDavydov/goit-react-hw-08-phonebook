@@ -1,0 +1,21 @@
+.userMenuWrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.btnLogOut {
+  width: 100px;
+  line-height: 40px;
+  border-width: 0;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  background-image: linear-gradient(160deg, #8ceabb 0%, #378f7b 100%);
+  color: #fff;
+}
+
+.btnLogOut:hover {
+  cursor: pointer;
+  background-image: linear-gradient(160deg, #08b860 0%, #378f7b 100%);
+}

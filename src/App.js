@@ -1,12 +1,15 @@
-import './App.css';
+import "./App.css";
+// ===========
+import { Container } from "./components/Container/Container";
+import Footer from "./components/Footer/Footer";
+// ===========
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello 8 home work</h1>
-      </header>
-    </div>
+    <>
+      <Container></Container>
+      <Footer />
+    </>
   );
 }
 
