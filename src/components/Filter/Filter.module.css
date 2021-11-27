@@ -6,7 +6,7 @@
 
 .align__item .align--start {
   align-self: flex-start;
-  background-color: var(--base-bgcolor);
+  /* background-color: var(--base-bgcolor); */
 }
 
 .align__item .align--end {
@@ -17,9 +17,9 @@
   border: 0;
   font: inherit;
 }
-.input::placeholder {
-  color: var(--input-placeholder-color);
-}
+/* .input::placeholder { */
+/* color: var(--input-placeholder-color); */
+/* } */
 
 .form__field {
   margin-bottom: 1rem;
@@ -34,8 +34,8 @@
 
 .grid {
   margin: 0 auto;
-  max-width: var(--grid-max-width);
-  width: var(--grid-width);
+  /* max-width: var(--grid-max-width); */
+  /* width: var(--grid-width); */
 }
 
 .register {
@@ -53,5 +53,5 @@
   background-repeat: no-repeat;
   background-size: 1.5rem;
   background-position: 1rem 50%;
-  background-color: var(--base-bgcolor);
+  /* background-color: var(--base-bgcolor); */
 }
