@@ -29,8 +29,8 @@ function App() {
 
   return (
     <>
-      <AppBar />
       <Container>
+        <AppBar />
         <Suspense fallback={<LoaderTriangle />}>
           <Routes>
             <Route path="/" element={<PublicRoute component={HomePage} />} />
@@ -48,8 +48,8 @@ function App() {
             />
           </Routes>
         </Suspense>
+        <Footer />
       </Container>
-      <Footer />
       <ToastContainer />
     </>
   );
