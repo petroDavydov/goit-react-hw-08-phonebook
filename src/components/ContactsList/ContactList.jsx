@@ -1,11 +1,11 @@
 import Contacts from "../Contact";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getFilteredContacts } from "../../redux/Phonebook/phone-selectors";
+import { getFilteredContacts } from "../../redux/phonebook/phone-selectors";
 import {
   fetchContacts,
   deleteContact,
-} from "../../redux/Phonebook/phone-operations";
+} from "../../redux/phonebook/phone-operations";
 import s from "./ContactList.module.css";
 
 export default function ContactsList() {

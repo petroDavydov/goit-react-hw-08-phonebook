@@ -3,7 +3,7 @@ import UserMenu from "../UserMenu";
 import Navigation from "../Navigation";
 import AuthNav from "../AuthNav";
 import { useSelector } from "react-redux";
-import { getIsAuth } from "../../redux/Auth/authSelectors";
+import { getIsAuth } from "../../redux/auth/authSelectors";
 
 const Appbar = () => {
   const isAuth = useSelector(getIsAuth);

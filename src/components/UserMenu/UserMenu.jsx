@@ -1,8 +1,8 @@
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
-// import { getUserName } from "../../redux/Auth/authSelectors";
+// import { getUserName } from "../../redux/auth/authSelectors";
 import defaultAvatar from "../../images/avatar.png";
-import { fetchLogout } from "../../redux/Auth/authOperations";
+import { fetchLogout } from "../../redux/auth/authOperations";
 import s from "./UserMenu.module.css";
 
 const UserMenu = () => {

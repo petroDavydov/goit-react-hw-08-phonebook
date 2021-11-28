@@ -4,8 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { toast } from "react-toastify";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchRegister } from "../../redux/Auth/authOperations";
-import { getIsAuth } from "../../redux/Auth/authSelectors";
+import { fetchRegister } from "../../redux/auth/authOperations";
+import { getIsAuth } from "../../redux/auth/authSelectors";
 
 const RegisterPage = () => {
   const [name, setName] = useState("");

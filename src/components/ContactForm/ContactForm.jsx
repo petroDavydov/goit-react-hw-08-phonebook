@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/Phonebook/phone-operations";
+import { addContact } from "../../redux/phonebook/phone-operations";
 import s from "./ContactForm.module.css";
-import { getContacts } from "../../redux/Phonebook/phone-selectors";
+import { getContacts } from "../../redux/phonebook/phone-selectors";
 
 export default function Form() {
   const dispatch = useDispatch();

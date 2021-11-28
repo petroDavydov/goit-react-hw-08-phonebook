@@ -9,8 +9,8 @@ import Container from "../Container";
 import PrivateRoute from "../../Routes/PrivateRoute";
 import PublicRoute from "../../Routes/PublicRoute";
 import AppBar from "../Appbar";
-import { fetchCurrentUser } from "../../redux/Auth/authOperations";
-import { getIsAuth } from "../../redux/Auth/authSelectors";
+import { fetchCurrentUser } from "../../redux/auth/authOperations";
+import { getIsAuth } from "../../redux/auth/authSelectors";
 
 const HomePage = lazy(() => import("../../Pages/HomePage/HomePage"));
 const ContactPage = lazy(() => import("../../Pages/ContactPage/ContactPage"));

@@ -3,8 +3,8 @@ import { Form, Row, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchLogin } from "../../redux/Auth/authOperations";
-import { getIsAuth, errorRejected } from "../../redux/Auth/authSelectors";
+import { fetchLogin } from "../../redux/auth/authOperations";
+import { getIsAuth, errorRejected } from "../../redux/auth/authSelectors";
 
 const LoginPage = () => {
   const [password, setPassword] = useState("");
