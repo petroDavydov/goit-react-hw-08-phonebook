@@ -1,5 +1,5 @@
 import { createAction } from "@reduxjs/toolkit";
 
-const changeFilter = createAction("contacts/changeFilter");
+const changeFilter = createAction("contact/changeFilter");
 
 export default changeFilter;
