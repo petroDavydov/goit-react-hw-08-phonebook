@@ -1,26 +1,25 @@
-import s from "./LoginPage.module.css";
+import s from "./RegisterPage.module.css";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchLogin } from "../../redux/Auth/authOperations";
-import { getIsAuth, errorRejected } from "../../redux/Auth/authSelectors";
+import { fetchRegister } from "../../redux/Auth/authOperations";
+import { getIsAuth } from "../../redux/Auth/authSelectors";
 
-const LoginPage = () => {
+const RegisterPage = () => {
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [error, setError] = useState(null);
 
-  const isAuth = useSelector(getIsAuth);
-  const isUserError = useSelector(errorRejected);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    setError(isUserError);
-  }, [isUserError]);
+  const isAuth = useSelector(getIsAuth);
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
+      case "name":
+        return setName(value);
+
       case "email":
         return setEmail(value);
 
@@ -34,19 +33,35 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(fetchLogin({ email, password }));
+    dispatch(fetchRegister({ name, email, password }));
+    toast.success(`You have successfully created an account ${name}`);
     reset();
   };
 
   const reset = () => {
+    setName("");
     setPassword("");
     setEmail("");
   };
   return (
     !isAuth && (
       <div className={s.content}>
-        <h2 className={s.title}>Enter login</h2>
+        <h2 className={s.title}>Please register</h2>
         <Form onSubmit={handleSubmit} className={s.form}>
+          <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+            <Form.Label column sm={2}>
+              Name
+            </Form.Label>
+            <Col sm={10}>
+              <Form.Control
+                type="text"
+                placeholder="Name"
+                name="name"
+                value={name}
+                onChange={handleChange}
+              />
+            </Col>
+          </Form.Group>
           <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
             <Form.Label column sm={2}>
               Email
@@ -73,10 +88,10 @@ const LoginPage = () => {
             <Col sm={10}>
               <Form.Control
                 type="password"
+                placeholder="Password"
                 name="password"
                 value={password}
                 onChange={handleChange}
-                placeholder="Password"
               />
             </Col>
           </Form.Group>
@@ -98,4 +113,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPage;

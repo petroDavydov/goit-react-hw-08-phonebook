@@ -1,21 +1,36 @@
-.userMenuWrapper {
-  display: flex;
-  align-items: baseline;
+.text {
+  color: #000;
+  line-height: 1.2;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-.btnLogOut {
-  width: 100px;
-  line-height: 40px;
-  border-width: 0;
-  border-radius: 20px;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  background-image: linear-gradient(160deg, #8ceabb 0%, #378f7b 100%);
+.logout {
+  display: flex;
+  align-items: center;
+  margin-right: 150px;
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.btn {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  padding: 3px 10px;
+  outline: none;
+  border: 2px solid brown;
+  border-radius: 4px;
+  background: #fff;
+  transition: 0.2s;
+}
+.btn:hover {
+  background: brown;
   color: #fff;
 }
-
-.btnLogOut:hover {
-  cursor: pointer;
-  background-image: linear-gradient(160deg, #08b860 0%, #378f7b 100%);
+.btn:active {
+  background: rgb(89, 0, 255);
+  border: none;
 }

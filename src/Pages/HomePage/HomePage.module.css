@@ -1,0 +1,16 @@
+.content {
+  min-height: calc(85vh - 80px);
+}
+
+.text {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.21;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.titleHomePage {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}

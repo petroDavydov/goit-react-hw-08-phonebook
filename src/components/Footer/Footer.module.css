@@ -5,11 +5,24 @@
   border-radius: 10px;
   padding: 20px;
   margin-top: 30px;
+  background: linear-gradient(
+    to right,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
   position: sticky;
   bottom: 0;
-  background-color: #a5f56f;
 }
-
 .description {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 25px;
@@ -26,10 +39,12 @@
   margin-right: 10px;
 }
 
-.link {
-  text-decoration: none;
-  transform: translate(3s);
+.footerLink {
+  font-size: 18px;
+  text-decoration: underline;
+  color: rgba(47, 32, 255, 0.726);
 }
-.link:hover {
-  color: red;
+
+.footerLink:hover {
+  color: rgba(255, 32, 136, 0.726);
 }

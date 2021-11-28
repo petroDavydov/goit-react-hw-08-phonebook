@@ -1,8 +1,7 @@
 .list {
   display: flex;
-  justify-content: end;
   list-style: none;
-  margin-right: 150px;
+  margin-left: 150px;
 }
 
 .item:not(:last-child) {
@@ -16,13 +15,14 @@
   padding: 10px;
   border: none;
   cursor: pointer;
+  color: slategrey;
   text-decoration: none;
 }
 
 .link:hover {
-  color: coral;
+  color: springgreen;
 }
 
 .activeLink {
-  text-decoration: none;
+  border-bottom: 1px solid red;
 }

@@ -1,1 +1,1 @@
-export { default } from "./AuthNav";
+export { defauot } from "./AuthNav";
