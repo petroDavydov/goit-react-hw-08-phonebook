@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { contactsOperations } from "../../redux/Phonebook/index";
+import { addContact } from "../../redux/Phonebook/phone-operations";
 import s from "./ContactForm.module.css";
 import { getContacts } from "../../redux/Phonebook/phone-selectors";
 
@@ -30,7 +30,7 @@ export default function Form() {
       resetState();
       return alert(`${name} is already in the directory`);
     }
-    dispatch(contactsOperations.addContact({ name, number }));
+    dispatch(addContact({ name, number }));
     resetState();
   };
 

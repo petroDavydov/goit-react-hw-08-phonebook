@@ -4,11 +4,11 @@ import { Routes, Route } from "react-router-dom";
 import { Suspense, lazy, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Footer from "../Footer/Footer";
-import LoaderTriangle from "../Loader/Loader";
+import LoaderTriangle from "../Loader";
 import Container from "../Container";
 import PrivateRoute from "../../Routes/PrivateRoute";
 import PublicRoute from "../../Routes/PublicRoute";
-import AppBar from "../Appbar/Appbar";
+import AppBar from "../Appbar";
 import { fetchCurrentUser } from "../../redux/Auth/authOperations";
 import { getIsAuth } from "../../redux/Auth/authSelectors";
 

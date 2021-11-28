@@ -1,17 +1,18 @@
-import Contacts from "../Contact/Contact";
+import Contacts from "../Contact";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { getFilteredContacts } from "../../redux/Phonebook/phone-selectors";
 import {
-  contactsOperations,
-  contactsSelectors,
-} from "../../redux/Phonebook/index";
+  fetchContacts,
+  deleteContact,
+} from "../../redux/Phonebook/phone-operations";
 import s from "./ContactList.module.css";
 
 export default function ContactsList() {
-  const contacts = useSelector(contactsSelectors.getVisibleContacts);
+  const contacts = useSelector(getFilteredContacts);
   const dispatch = useDispatch();
 
-  useEffect(() => dispatch(contactsOperations.fetchContacts()), [dispatch]);
+  useEffect(() => dispatch(fetchContacts()), [dispatch]);
 
   return (
     <ul>
@@ -21,7 +22,7 @@ export default function ContactsList() {
           <button
             className={s.button}
             type="button"
-            onClick={() => dispatch(contactsOperations.deleteContact(id))}
+            onClick={() => dispatch(deleteContact(id))}
           >
             Delete
           </button>
