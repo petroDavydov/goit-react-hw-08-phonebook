@@ -13,6 +13,7 @@ const RegisterPage = () => {
   const [email, setEmail] = useState("");
 
   const dispatch = useDispatch();
+
   const isAuth = useSelector(getIsAuth);
 
   const handleChange = ({ target: { name, value } }) => {
