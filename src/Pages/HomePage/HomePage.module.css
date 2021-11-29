@@ -1,8 +1,10 @@
 .content {
   min-height: calc(85vh - 80px);
+  text-align: center;
 }
 
 .text {
+  font-family: "Times New Roman", Times, serif;
   font-size: 30px;
   font-weight: 500;
   line-height: 1.21;
@@ -12,5 +14,10 @@
 
 .titleHomePage {
   font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
+  font-weight: 800;
+  font-size: 100px;
+  text-shadow: -1px -1px #fff, -2px -2px #fff, -1px 1px #fff, -2px 2px #fff,
+    1px 1px #fff, 2px 2px #fff, 1px -1px #fff, 2px -2px #fff, -3px -3px 2px #bbb,
+    -3px 3px 2px #bbb, 3px 3px 2px #bbb, 3px -3px 2px #bbb;
+  color: #c0885d;
 }

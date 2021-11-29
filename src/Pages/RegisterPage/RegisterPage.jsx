@@ -35,7 +35,7 @@ const RegisterPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(fetchRegister({ name, email, password }));
-    toast.success(`You have successfully created an account ${name}`);
+    // toast.success(`You have successfully created an account ${name}`);
     reset();
   };
 

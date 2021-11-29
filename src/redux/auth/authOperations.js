@@ -60,8 +60,8 @@ export const fetchCurrentUser = createAsyncThunk(
   async (_, { rejectWithValue, getState }) => {
     const state = getState();
     const persistToken = state.auth.token;
-    if (persistToken === null) {
-      return rejectWithValue();
+    if (!persistToken) {
+      return rejectWithValue({ message: `error with token` });
     }
     token.set(persistToken);
     try {

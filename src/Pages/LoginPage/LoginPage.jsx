@@ -1,23 +1,24 @@
 import s from "./LoginPage.module.css";
 import { Form, Row, Col, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+// import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchLogin } from "../../redux/auth/authOperations";
-import { getIsAuth, errorRejected } from "../../redux/auth/authSelectors";
+import { getIsAuth } from "../../redux/auth/authSelectors";
+// import {errorRejected } from "../../redux/auth/authSelectors";
 
 const LoginPage = () => {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [error, setError] = useState(null);
-
+  //   const [error, setError] = useState(null);
   const isAuth = useSelector(getIsAuth);
-  const isUserError = useSelector(errorRejected);
+  //   const isUserError = useSelector(errorRejected);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    setError(isUserError);
-  }, [isUserError]);
+  //   useEffect(() => {
+  //     setError(isUserError);
+  //   }, [isUserError]);
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {

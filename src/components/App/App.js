@@ -8,7 +8,7 @@ import LoaderTriangle from "../Loader";
 import Container from "../Container";
 import PrivateRoute from "../../Routes/PrivateRoute";
 import PublicRoute from "../../Routes/PublicRoute";
-import AppBar from "../Appbar";
+import Appbar from "../Appbar";
 import { fetchCurrentUser } from "../../redux/auth/authOperations";
 import { getIsAuth } from "../../redux/auth/authSelectors";
 
@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <Container>
-        <AppBar />
+        <Appbar />
         <Suspense fallback={<LoaderTriangle />}>
           <Routes>
             <Route path="/" element={<PublicRoute component={HomePage} />} />

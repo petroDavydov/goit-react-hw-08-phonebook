@@ -1,3 +1,7 @@
 .contacts {
   min-height: calc(85vh - 80px);
 }
+
+.titleContactPage {
+  text-align: center;
+}
