@@ -20,6 +20,7 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   extraReducers: {
+    //   ===!!!
     [authAction.registerSuccess](state, { payload }) {
       state.user = payload.user;
       state.token = payload.token;
@@ -29,12 +30,13 @@ const authSlice = createSlice({
     [authAction.registerError](state, { payload }) {
       state.error = payload.message;
     },
-
+    // ===!!!
     // [fetchRegister.fulfilled](state, { payload }) {
     //   state.user = payload.user;
     //   state.token = payload.token;
     //   state.isAuth = true;
     // },
+
     [fetchLogin.fulfilled](state, { payload }) {
       state.user = payload.user;
       state.token = payload.token;
