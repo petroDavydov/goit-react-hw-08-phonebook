@@ -1,6 +1,6 @@
 .list {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   list-style: none;
   margin-right: 150px;
 }

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 import {
-  fetchRegister,
+  //   fetchRegister,
   fetchLogin,
   fetchLogout,
   fetchCurrentUser,
@@ -20,11 +20,21 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   extraReducers: {
-    [fetchRegister.fulfilled](state, { payload }) {
+    [authAction.registerSuccess](state, { payload }) {
       state.user = payload.user;
       state.token = payload.token;
       state.isAuth = true;
     },
+
+    [authAction.registerError](state, { payload }) {
+      state.error = payload.message;
+    },
+
+    // [fetchRegister.fulfilled](state, { payload }) {
+    //   state.user = payload.user;
+    //   state.token = payload.token;
+    //   state.isAuth = true;
+    // },
     [fetchLogin.fulfilled](state, { payload }) {
       state.user = payload.user;
       state.token = payload.token;
